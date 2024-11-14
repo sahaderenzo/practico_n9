@@ -2,6 +2,8 @@ import { ComponentCounter } from "./components/ComponentCounter/ComponentCounter
 import { MiPrimerComponent } from "./components/MiPrimerComponente/MiPrimerComponent"
 import { ComponentUseEffect } from "./components/ComponentUseEffect/ComponentUseEffect"
 import { FormComponent } from "./components/FormComponent/FormComponent"
+import { AppProduct } from "./components/AddProduct/AppProduct"
+import { FormProduct } from "./components/AddProduct/FormProducts/FormProduct"
 
 export const App = () => {
 
@@ -9,8 +11,10 @@ export const App = () => {
         <div style={{ display: "flex", flexDirection: "column", gap: "2vh" }}>
             {/* <MiPrimerComponent text={"Texto de prueba"} color={"red"} fontSize={5} />
             <ComponentCounter />
-            <ComponentUseEffect /> */}
-            <FormComponent />
+            <ComponentUseEffect />
+            <FormComponent /> */}
+            <AppProduct />
+            <FormProduct />
         </div>
     )
 }
