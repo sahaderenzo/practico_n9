@@ -1,12 +1,18 @@
-import { Form } from "react-bootstrap"
+import { Button, Form } from "react-bootstrap"
 import { useForm } from "../../../hooks/useForm"
+import { FC } from "react"
 
-export const FormProduct = () => {
+interface IPropsFormProduct {
+    handleAddProduct: Function
+}
+
+export const FormProduct: FC<IPropsFormProduct> = ({ handleAddProduct }) => {
 
     const { handleChange, values, resetForms } = useForm({ nombre: '', imagen: '', precio: 0 })
 
     const handleSubmitForm = () => {
-
+        handleAddProduct(values)
+        resetForms()
     }
 
     return (
@@ -26,6 +32,9 @@ export const FormProduct = () => {
                 <Form.Label>Precio</Form.Label>
                 <Form.Control type="number" name="precio" placeholder="Ingrese precio del producto" value={values.precio} onChange={handleChange}></Form.Control>
             </Form.Group>
+            <div className="d-flex justify-content-center mt-4">
+                <Button onClick={handleSubmitForm} variant="primary">Enviar producto</Button>
+            </div>
         </Form>
     )
 }

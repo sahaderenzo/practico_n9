@@ -3,7 +3,6 @@ import { MiPrimerComponent } from "./components/MiPrimerComponente/MiPrimerCompo
 import { ComponentUseEffect } from "./components/ComponentUseEffect/ComponentUseEffect"
 import { FormComponent } from "./components/FormComponent/FormComponent"
 import { AppProduct } from "./components/AddProduct/AppProduct"
-import { FormProduct } from "./components/AddProduct/FormProducts/FormProduct"
 
 export const App = () => {
 
@@ -14,7 +13,6 @@ export const App = () => {
             <ComponentUseEffect />
             <FormComponent /> */}
             <AppProduct />
-            <FormProduct />
         </div>
     )
 }
